@@ -1,5 +1,5 @@
 function myName(name: string): string {
-  console.log(`Hello, ${name}!`);
+  // console.log(`Hello, ${name}!`);
   return `Hello, ${name}!`;
 }
 
@@ -9,6 +9,6 @@ const obj = {
   name: "server",
   age: 10, // This will cause a type error since age should be a string
 };
+// const test = obj.name
 
-obj.name=server; // This is fine
-obj.age = 10; // This will cause a type error since age should be a string
+obj.age = 20;
