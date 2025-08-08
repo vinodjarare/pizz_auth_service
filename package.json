@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev":" nodemon src/server.ts",
+    "dev": " nodemon src/server.ts",
     "format:check": "prettier --check .",
     "format:fix": "prettier --write .",
     "lint": "eslint src --ext .ts,.tsx,.js",
@@ -44,6 +44,7 @@
   "dependencies": {
     "@types/express": "^5.0.3",
     "dotenv": "^17.2.1",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "winston": "^3.17.0"
   }
 }
