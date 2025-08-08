@@ -1,14 +1,19 @@
-function myName(name: string): string {
-  // console.log(`Hello, ${name}!`);
-  return `Hello, ${name}!`;
-}
+import http from "http";
+import { Config } from "./config";
+import app from "./app";
 
-myName("server"); // This will cause a type error since 10 is not a string
-
-const obj = {
-  name: "server",
-  age: 10, // This will cause a type error since age should be a string
+const startServer = () => {
+  const PORT = Config.PORT || 3000;
+  try {
+    const server = http.createServer(app);
+    server.listen(PORT, () => {
+      // eslint-disable-next-line no-console
+      console.log(`Server is running on port ${PORT}`);
+    });
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error("Error starting server:", error);
+  }
 };
-// const test = obj.name
 
-obj.age = 20;
+startServer();
